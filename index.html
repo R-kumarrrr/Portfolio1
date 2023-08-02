@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d3767d095b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = "header">
+    <div class="container">
+        <nav >
+            <img src="./images/logo (2).png" class="logo">
+            <ul id="sidemenu"style="position: fixed; margin-left: 45%; margin-right: 10%">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i id="closemenu" class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i id="openmenu" class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Rajat kumar</span></h1>
+            <p><span> Coder</span> And</br> A <span>Web designer</span> </p>
+
+        </div>
+    </div>
+    </div>
+<!-- -----------About----------- -->
+<div id="About">
+    <div class="container">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="./images/Pic21.jpg">
+    </div>
+    <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>My name is Rajat kumar. I have completed my schooling from Govt. Model Sr. Sec. School. Currently I am pursuing my bachelor degree i.e B.TECH CSE from Rayat Bahra University.
+            I want to be a Web developer. </p>
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Skills')" >Skills</p>
+            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('Education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="Skills">
+            <ul>
+                <li><span>Web development</span><br>Web app development</li>
+                <li><span>App development</span><br>Development of Android/ios apps</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="Experience">
+            <ul>
+                <li><span>No Experience</span><br>Starting the journey</li>
+            </ul>
+        </div>
+        
+        <div class="tab-contents" id="Education">
+            <ul>
+                <li><span>2019</span><br>Passed 10th Standard</li>
+                <li><span>2021</span><br>Passed 12th Standard</li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- -----------services--------- -->
+    <div id="Services">
+        <div class="container"></div>
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+         <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web design</h2>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <a href="#">Learn more</a>
+         </div>
+         <div>
+            <i class="fa-brands fa-app-store-ios"></i>
+            <h2>App design</h2>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <a href="#">Learn more</a>
+         </div>
+         <div>
+            <i class="fa-brands fa-html5"></i>
+            <h2>Html</h2>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <a href="#">Learn more</a>
+         </div>
+        </div>
+    </div>
+
+    <!-- ----------------------contact------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>rajatdahiya378@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7710260766</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/rajat%20kumar"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/RajatKu02554315"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/_satanist._.666_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/rajat-kumar-b1baa0264/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="/images/CV_2022081921193627.pdf" download class="btn btn1">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>      
+        
+    </div>
+    <div class="end">
+        Made with love <i class="fa-solid fa-heart"></i>  
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+   </script>
+
+   <script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+   </script>
+</body>
+</html>
